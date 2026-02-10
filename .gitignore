@@ -1,0 +1,10 @@
+# local binaries
+minikube-linux-amd64
+
+# python cache
+__pycache__/
+*.pyc
+
+# editor
+.vim/
+
