@@ -1,0 +1,8 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY app/app.py /app/app.py
+
+CMD ["python3", "app.py"]
+
