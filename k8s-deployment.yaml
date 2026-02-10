@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: omniops-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: omniops
+  template:
+    metadata:
+      labels:
+        app: omniops
+    spec:
+      containers:
+        - name: omniops
+          image: omniops-app:latest
+          imagePullPolicy: IfNotPresent
+          command: ["python3", "app.py"]
+
