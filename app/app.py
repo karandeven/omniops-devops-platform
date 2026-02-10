@@ -1,12 +1,13 @@
+import time
 import os
 
-def main():
-    app_name = os.getenv("APP_NAME", "OMNIOPS")
+APP_NAME = os.getenv("APP_NAME", "OMNIOPS")
+ENV = os.getenv("ENV", "dev")
 
-    print("Ganpati Bappa Morya 🙏")
-    print(f"{app_name} is running.")
-    print("This app is a base for Docker, CI/CD and Kubernetes learning.")
+print(f"🚀 {APP_NAME} started")
+print(f"🌍 Environment: {ENV}")
 
-if __name__ == "__main__":
-    main()
+while True:
+    print(f"🙏 Ganpati Bappa Morya | {APP_NAME} alive in {ENV}")
+    time.sleep(10)
 

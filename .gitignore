@@ -1,10 +1,13 @@
-# local binaries
+# binaries
 minikube-linux-amd64
 
-# python cache
+# python
 __pycache__/
 *.pyc
 
-# editor
-.vim/
+# env
+.env
+
+# docker
+*.log
 

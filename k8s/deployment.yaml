@@ -13,8 +13,14 @@ spec:
         app: omniops
     spec:
       containers:
-        - name: omniops
-          image: omniops-app:latest
-          imagePullPolicy: IfNotPresent
-          command: ["python3", "app.py"]
+        - name: omniops-app
+          image: karandeven/omniops-app:latest
+          imagePullPolicy: Always
+          env:
+            - name: APP_NAME
+              value: "OMNIOPS"
+            - name: ENV
+              value: "production"
+          ports:
+            - containerPort: 80
 
